@@ -9,7 +9,7 @@ VisualStudioソリューションフォルダ内にはソースコードと無�
 
 **成果物**
 
-- ダイアログベースのMFCプロジェクトを含む、VisualStudioソリューション一式（不要なファイルはPUSHしないこと）
+- ダイアログベースのMFCプロジェクトを含む、VisualStudioソリューション一式（不要なファイルをPUSHしないこと）
 - .gitignore ファイル
 
 ## Step.2 aaaaaa

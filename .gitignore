@@ -350,4 +350,4 @@ MigrationBackup/
 .ionide/
 
 /MFC_study/*
-!/MFC_study/MFC_study/.cpp
+!/MFC_study/MFC_study/MFC_study.cpp

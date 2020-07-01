@@ -1,2 +1,3 @@
 /MFC_study/*
-!/MFC_study/MFC_study.cpp
+!/MFC_study/*.cpp
+!/MFC_study/MFC_study.h

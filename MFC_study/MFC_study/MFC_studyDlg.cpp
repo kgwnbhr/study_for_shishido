@@ -153,12 +153,3 @@ HCURSOR CMFCstudyDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
 }
-
-
-
-void CMFCstudyDlg::OnBnClickedOk()
-{
-	// TODO: ここにコントロール通知ハンドラー コードを追加します。
-	CDialogEx::OnOK();
-	AfxMessageBox("test");
-}

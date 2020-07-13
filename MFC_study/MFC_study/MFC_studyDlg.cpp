@@ -65,6 +65,8 @@ BEGIN_MESSAGE_MAP(CMFCstudyDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDOK, &CMFCstudyDlg::OnBnClickedOk)
+	ON_BN_CLICKED(IDC_BUTTON1, &CMFCstudyDlg::OnBnClickedButton1)
 END_MESSAGE_MAP()
 
 
@@ -153,3 +155,19 @@ HCURSOR CMFCstudyDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CMFCstudyDlg::OnBnClickedOk()
+{
+	// TODO: ここにコントロール通知ハンドラー コードを追加します。
+	CDialogEx::OnOK();
+	//AfxMessageBox(_T("Test"));
+}
+
+
+
+void CMFCstudyDlg::OnBnClickedButton1()
+{
+	// TODO: ここにコントロール通知ハンドラー コードを追加します。
+	AfxMessageBox(_T("Test"));
+}

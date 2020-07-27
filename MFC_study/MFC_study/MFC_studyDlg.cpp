@@ -52,6 +52,8 @@ END_MESSAGE_MAP()
 
 CMFCstudyDlg::CMFCstudyDlg(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_MFC_STUDY_DIALOG, pParent)
+	, Edit_test(_T(""))
+	, m_csMessage(_T(""))
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
@@ -59,6 +61,7 @@ CMFCstudyDlg::CMFCstudyDlg(CWnd* pParent /*=nullptr*/)
 void CMFCstudyDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Text(pDX, IDC_EDIT1, m_csMessage);
 }
 
 BEGIN_MESSAGE_MAP(CMFCstudyDlg, CDialogEx)
@@ -67,6 +70,8 @@ BEGIN_MESSAGE_MAP(CMFCstudyDlg, CDialogEx)
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDOK, &CMFCstudyDlg::OnBnClickedOk)
 	ON_BN_CLICKED(IDC_BUTTON1, &CMFCstudyDlg::OnBnClickedButton1)
+	ON_BN_CLICKED(IDC_BUTTON2, &CMFCstudyDlg::OnBnClickedButton2)
+	ON_EN_CHANGE(IDC_EDIT1, &CMFCstudyDlg::OnEnChangeEdit1)
 END_MESSAGE_MAP()
 
 
@@ -161,7 +166,6 @@ void CMFCstudyDlg::OnBnClickedOk()
 {
 	// TODO: ここにコントロール通知ハンドラー コードを追加します。
 	CDialogEx::OnOK();
-	//AfxMessageBox(_T("Test"));
 }
 
 
@@ -170,4 +174,23 @@ void CMFCstudyDlg::OnBnClickedButton1()
 {
 	// TODO: ここにコントロール通知ハンドラー コードを追加します。
 	AfxMessageBox(_T("Test"));
+}
+
+
+void CMFCstudyDlg::OnBnClickedButton2()
+{
+	// TODO: ここにコントロール通知ハンドラー コードを追加します。
+	CWnd::UpdateData(TRUE);
+	AfxMessageBox(m_csMessage);
+}
+
+
+void CMFCstudyDlg::OnEnChangeEdit1()
+{
+	// TODO: これが RICHEDIT コントロールの場合、このコントロールが
+	// この通知を送信するには、CDialogEx::OnInitDialog() 関数をオーバーライドし、
+	// CRichEditCtrl().SetEventMask() を関数し呼び出します。
+	// OR 状態の ENM_CHANGE フラグをマスクに入れて呼び出す必要があります。
+	// TODO: ここにコントロール通知ハンドラー コードを追加してください。
+
 }
